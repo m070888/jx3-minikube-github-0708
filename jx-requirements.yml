@@ -10,9 +10,9 @@ spec:
     devEnvApprovers:
     - todo
     environmentGitOwner: todo
-    gitKind: gitlab
-    gitName: gitlab
-    gitServer: https://gitlab.com
+    gitKind: github
+    gitName: github
+    gitServer: https://github.com
     provider: minikube
   environments:
   - key: dev
