@@ -4,7 +4,7 @@ kind: Service
 metadata:
   name: golang-http
   labels:
-    chart: "golang-http-0.0.1"
+    chart: "golang-http-0.0.2"
     gitops.jenkins-x.io/pipeline: 'namespaces'
   annotations:
     meta.helm.sh/release-name: 'golang-http'
