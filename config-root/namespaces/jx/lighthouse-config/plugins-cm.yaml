@@ -6,6 +6,10 @@ data:
       repos:
       - m070888/jx3-minikube-github-0708
       require_self_approval: true
+    - lgtm_acts_as_approve: true
+      repos:
+      - m070888/golang-http
+      require_self_approval: true
     cat: {}
     cherry_pick_unapproved: {}
     config_updater:
@@ -16,6 +20,9 @@ data:
         env/prow/plugins.yaml:
           name: plugins
     external_plugins:
+      m070888/golang-http:
+      - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
+        name: cd-indicators
       m070888/jx3-minikube-github-0708:
       - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
         name: cd-indicators
@@ -24,6 +31,22 @@ data:
       additional_labels: null
     owners: {}
     plugins:
+      m070888/golang-http:
+      - approve
+      - assign
+      - blunderbuss
+      - help
+      - hold
+      - lgtm
+      - lifecycle
+      - override
+      - size
+      - trigger
+      - wip
+      - heart
+      - cat
+      - dog
+      - pony
       m070888/jx3-minikube-github-0708:
       - config-updater
       - approve
@@ -53,6 +76,11 @@ data:
     - repos:
       - m070888/jx3-minikube-github-0708
       trusted_org: todo
+    - repos:
+      - m070888/golang-http
+      trusted_org: todo
+    welcome:
+    - message_template: Welcome
 kind: ConfigMap
 metadata:
   creationTimestamp: null
