@@ -1,0 +1,51 @@
+apiVersion: v1
+data:
+  config.yaml: |
+    branch-protection:
+      protect-tested-repos: true
+    github:
+      LinkURL: null
+    in_repo_config:
+      enabled:
+        m070888/jx3-minikube-github-0708: true
+    plank: {}
+    pod_namespace: jx
+    prowjob_namespace: jx
+    push_gateway:
+      serve_metrics: true
+    tide:
+      context_options:
+        from-branch-protection: true
+        required-if-present-contexts: null
+        skip-unknown-contexts: false
+      merge_method:
+        m070888/jx3-minikube-github-0708: merge
+      queries:
+      - labels:
+        - approved
+        missingLabels:
+        - do-not-merge
+        - do-not-merge/hold
+        - do-not-merge/work-in-progress
+        - needs-ok-to-test
+        - needs-rebase
+        repos:
+        - m070888/jx3-minikube-github-0708
+      - labels:
+        - updatebot
+        missingLabels:
+        - do-not-merge
+        - do-not-merge/hold
+        - do-not-merge/work-in-progress
+        - needs-ok-to-test
+        - needs-rebase
+        repos:
+        - m070888/jx3-minikube-github-0708
+      target_url: http://dashboard-jx.10.0.2.15.nip.io
+kind: ConfigMap
+metadata:
+  creationTimestamp: null
+  name: config
+  namespace: jx
+  labels:
+    gitops.jenkins-x.io/pipeline: 'namespaces'
