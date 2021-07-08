@@ -137,3 +137,21 @@
     repositoryUrl: http://bucketrepo.jx.svc.cluster.local/bucketrepo/charts/
     resourcePath: config-root/namespaces/jx-staging/golang-http
     version: 0.0.1
+- namespace: jx-production
+  path: helmfiles/jx-production/helmfile.yaml
+  releases:
+  - apiVersion: v1
+    appVersion: 0.0.2
+    applicationUrl: http://golang-http-jx-production.10.0.2.15.nip.io
+    description: A Helm chart for Kubernetes
+    firstDeployed: "2021-07-08T17:19:10Z"
+    icon: https://raw.githubusercontent.com/cdfoundation/artwork/master/jenkinsx/icon/color/jenkinsx-icon-color.png
+    ingresses:
+    - name: golang-http
+      url: http://golang-http-jx-production.10.0.2.15.nip.io
+    lastDeployed: "2021-07-08T17:19:10Z"
+    name: golang-http
+    repositoryName: dev
+    repositoryUrl: http://bucketrepo.jx.svc.cluster.local/bucketrepo/charts/
+    resourcePath: config-root/namespaces/jx-production/golang-http
+    version: 0.0.2
