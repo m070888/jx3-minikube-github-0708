@@ -7,6 +7,7 @@ data:
       LinkURL: null
     in_repo_config:
       enabled:
+        m070888/golang-http: true
         m070888/jx3-minikube-github-0708: true
     plank: {}
     pod_namespace: jx
@@ -19,6 +20,7 @@ data:
         required-if-present-contexts: null
         skip-unknown-contexts: false
       merge_method:
+        m070888/golang-http: merge
         m070888/jx3-minikube-github-0708: merge
       queries:
       - labels:
@@ -31,6 +33,7 @@ data:
         - needs-rebase
         repos:
         - m070888/jx3-minikube-github-0708
+        - m070888/golang-http
       - labels:
         - updatebot
         missingLabels:
@@ -41,6 +44,7 @@ data:
         - needs-rebase
         repos:
         - m070888/jx3-minikube-github-0708
+        - m070888/golang-http
       target_url: http://dashboard-jx.10.0.2.15.nip.io
 kind: ConfigMap
 metadata:
