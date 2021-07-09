@@ -1,0 +1,10 @@
+# Source: golang-http/templates/sa.yaml
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: golang-http-golang-http
+  annotations:
+    meta.helm.sh/release-name: 'golang-http'
+  namespace: jx-staging
+  labels:
+    gitops.jenkins-x.io/pipeline: 'namespaces'

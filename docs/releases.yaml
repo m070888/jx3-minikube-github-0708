@@ -119,3 +119,21 @@
     repositoryUrl: https://cdfoundation.github.io/tekton-helm-chart
     resourcePath: config-root/namespaces/tekton-pipelines/tekton-pipeline
     version: 0.24.4
+- namespace: jx-staging
+  path: helmfiles/jx-staging/helmfile.yaml
+  releases:
+  - apiVersion: v1
+    appVersion: 0.0.4
+    applicationUrl: http://golang-http-jx-staging.10.0.2.15.nip.io
+    description: A Helm chart for Kubernetes
+    firstDeployed: "2021-07-09T05:23:07Z"
+    icon: https://raw.githubusercontent.com/cdfoundation/artwork/master/jenkinsx/icon/color/jenkinsx-icon-color.png
+    ingresses:
+    - name: golang-http
+      url: http://golang-http-jx-staging.10.0.2.15.nip.io
+    lastDeployed: "2021-07-09T05:23:07Z"
+    name: golang-http
+    repositoryName: dev
+    repositoryUrl: http://bucketrepo.jx.svc.cluster.local/bucketrepo/charts/
+    resourcePath: config-root/namespaces/jx-staging/golang-http
+    version: 0.0.4
