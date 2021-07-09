@@ -2,6 +2,5 @@ filepath: ""
 helmfiles:
 - path: helmfiles/jx/helmfile.yaml
 - path: helmfiles/tekton-pipelines/helmfile.yaml
-- path: helmfiles/jx-staging/helmfile.yaml
 templates: {}
 renderedvalues: {}
