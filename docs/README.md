@@ -70,7 +70,7 @@
 		    </tr>
 	    <tr>
 	      <td><a href='' title='A Helm chart for Kubernetes'> <img src='https://raw.githubusercontent.com/cdfoundation/artwork/master/jenkinsx/icon/color/jenkinsx-icon-color.png' width='24px' height='24px'> golang-http </a></td>
-	      <td>0.0.4</td>
+	      <td>0.0.5</td>
 	      <td><a href='http://golang-http-jx-staging.10.0.2.15.nip.io'>view</a></td>
 	      <td></td>
 	    </tr>
