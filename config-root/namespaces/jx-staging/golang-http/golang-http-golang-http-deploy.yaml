@@ -5,7 +5,7 @@ metadata:
   name: golang-http-golang-http
   labels:
     draft: draft-app
-    chart: "golang-http-0.0.4"
+    chart: "golang-http-0.0.5"
     gitops.jenkins-x.io/pipeline: 'namespaces'
   annotations:
     meta.helm.sh/release-name: 'golang-http'
@@ -25,11 +25,11 @@ spec:
       serviceAccountName: golang-http-golang-http
       containers:
         - name: golang-http
-          image: "10.99.17.162:80/m070888/golang-http:0.0.4"
+          image: "10.99.17.162:80/m070888/golang-http:0.0.5"
           imagePullPolicy: IfNotPresent
           env:
             - name: VERSION
-              value: 0.0.4
+              value: 0.0.5
           envFrom: null
           ports:
             - name: http
